@@ -70,9 +70,9 @@ For technical folks, Petri nets can lower the barrier to building formally verif
 
 1. If I can show that VASM can be securely interpreted in state channels, it might be possible to run WASM applications as well using TrueBit's [WebAssembly interpreter](https://github.com/TrueBitFoundation/webasm-solidity)
 2. Presently, the VASM logic exists as a state variable in a deployed smart contract and is set via the constructor. Obviously adding a function to switch out the logic creates a simple "upgrade" mechanism, but this idea can be taken a step further by making `AppLogic` a part of the state passed around in the channel. Instead of installing applications through the [Counterfactual protocol](https://specs.counterfactual.com/en/latest/05-install-protocol.html), participants install the VASM interpreter and "load" the application by signing a state update. This opens the dangerous but interesting possibility of "renegotiating" a contract in the middle of its execution by agreeing to modify parts of it's logic. Risk can be mitigated with immutable restrictions on how the logic can be mutated.
-3. Petri nets can be used to [construct a Domain Specific Language](https://www.blahchain.com/posts/dsl_creation.html) that is NOT Turing complete. A critique of Solidity is that its Turing-completeness complicates security. If VASM can make it easy to build and run smart contract DSLs, we can experiment with strciter languages for specific problems.
+3. Petri nets can be used to [construct a Domain Specific Language](https://www.blahchain.com/posts/dsl_creation.html) that is NOT Turing complete. A critique of Solidity is that its Turing-completeness complicates security. If VASM can make it easy to build and run smart contract DSLs, we can experiment with stricter languages for specific problems.
 
 ## Does this code work?
 
-No. As of now, the contract compiles (you can try with `yarn && yarn build`) but nothing is tested. This is mostly to share an idea and recieve feedback. Feel free to open an issue :)
+No. As of now, the contract compiles (you can try with `yarn && yarn build`) but nothing is tested. This is mostly to share an idea and receive feedback. Feel free to open an issue :)
   
