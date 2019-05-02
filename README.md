@@ -20,7 +20,7 @@ The data structure is trivial to implement in Solidity:
 ```
 
 ## Why is this useful?
-Storing the state of a Counterfactual application this way makes perofrming transitions simpler and generalized:
+Storing the state of a Counterfactual application this way makes performing transitions simpler and generalized:
 ```solidity
 function applyAction(
     bytes calldata encodedState, bytes calldata encodedAction
