@@ -1,0 +1,47 @@
+{
+  "name": "vasm-cf",
+  "version": "0.0.1",
+  "description": "Vector Addition State Machine interpreter compatible with Counterfactual state channels",
+  "scripts": {
+    "build": "waffle waffle.js",
+    "migrate": "truffle migrate",
+    "test": "ts-mocha test/*",
+    "lint:fix": "yarn lint:ts:fix && yarn lint:sol:fix",
+    "lint": "yarn lint:ts && yarn lint:sol",
+    "lint:sol:fix": "solium -d contracts/ --fix",
+    "lint:sol": "solium -d .",
+    "lint:ts:fix": "tslint -c tslint.json -p . --fix",
+    "lint:ts": "tslint -c tslint.json -p ."
+  },
+  "devDependencies": {
+    "@counterfactual/contracts": "0.1.1",
+    "@counterfactual/types": "0.0.9",
+    "@types/chai": "4.1.7",
+    "@types/mocha": "5.2.6",
+    "chai": "4.2.0",
+    "ethereum-waffle": "2.0.11",
+    "ethers": "4.0.27",
+    "ethlint": "1.2.4",
+    "mocha": "6.1.4",
+    "solc": "0.5.3",
+    "truffle": "5.0.12",
+    "truffle-deploy-registry": "0.5.1",
+    "truffle-hdwallet-provider": "1.0.8",
+    "ts-mocha": "6.0.0",
+    "tslint": "5.16.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adklempner/vasm-cf.git"
+  },
+  "author": "Arseniy Klempner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adklempner/vasm-cf/issues"
+  },
+  "homepage": "https://github.com/adklempner/vasm-cf#readme",
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "openzeppelin-solidity": "^2.2.0"
+  }
+}
